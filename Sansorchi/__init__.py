@@ -1,7 +1,6 @@
-from json import loads
+from .data import Json
 
-file = open("/usr/lib/python3.8/sansorchi/data.json", "r")
-Json = loads(file.read())["word"]
+Json = Json["word"]
 
 
 def sansor(txt: str, bad=Json, **kwargs) -> str:
