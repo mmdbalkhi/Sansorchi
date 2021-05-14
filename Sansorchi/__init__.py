@@ -5,6 +5,8 @@ Json = loads(file.read())["word"]
 
 
 def sansor(txt: str, bad=Json, **kwargs) -> str:
+    """ This function takes an obligatory input called
+    >>> txt and deletes it if there is an insult in it."""
     split = txt.split(" ")
     a = ''
     for i in split:
@@ -16,4 +18,3 @@ def sansor(txt: str, bad=Json, **kwargs) -> str:
         if split[-1] != i:
             a += " "
     return a
-
