@@ -11,7 +11,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    description='Sansorchi is a program to remove bad and inappropriate words',
+    description='Remove Persian (Farsi) Swear Words',
     author='KomeilParseh',
     author_email='ahmdparsh129@gmail.com',
     url='https://github.com/KomeilParseh/Sansorchi',
