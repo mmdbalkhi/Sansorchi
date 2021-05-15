@@ -23,7 +23,11 @@ Sansorchi is a program to remove bad and inappropriate words (currently for the 
 
 ### Installation
 
-`pip3 install Sansorchi`
+```bash
+
+    pip3 install Sansorchi
+
+```
 
 ### usage
 
