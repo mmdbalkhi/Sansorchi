@@ -1,4 +1,5 @@
-from distutils.core import setup
+from setuptools import setup
+
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -6,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name='Sansorchi',
     packages=['Sansorchi'],
-    version='1.0.0',
+    version='1.0.1',
     long_description=long_description,
     long_description_content_type="text/markdown",
 
