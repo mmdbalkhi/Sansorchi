@@ -17,7 +17,7 @@ Sansorchi is a program to remove bad and inappropriate words (currently for the 
 
 از این دیتاست در فیلتر کردن متن ها در پروژه های خود استفاده کنید و متون پاک و سالمی را داشته باشید
 
-منبع دیتا بیس اصلی [اینجا](https://github.com/amirshnll/Persian-Swear-Words) است و این کتابخانه با پایتون نوشته شده است.
+منبع دیتا بیس اصلی [اینجا](https://github.com/amirshnll/Persian-Swear-Words) است .
 
 </div>
 
