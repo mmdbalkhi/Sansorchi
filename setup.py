@@ -1,5 +1,7 @@
 from setuptools import setup
 
+import version
+
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -7,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name='Sansorchi',
     packages=['Sansorchi'],
-    version='1.0.1',
+    version=version.__VERSION__,
     long_description=long_description,
     long_description_content_type="text/markdown",
 
