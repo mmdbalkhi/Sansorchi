@@ -37,3 +37,7 @@ Sansorchi is a program to remove bad and inappropriate words (currently for the 
     print(sansor("YOUR_TEXT"))
 
 ```
+
+### Contributing
+
+See this [file](to) to contribute
