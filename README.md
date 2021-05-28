@@ -1,5 +1,5 @@
-[![Python package](https://github.com/KomeilParseh/Sansorchi/actions/workflows/python-package.yml/badge.svg)](https://github.com/KomeilParseh/Sansorchi/actions/workflows/python-package.yml)
-[![Upload Python Package](https://github.com/KomeilParseh/Sansorchi/actions/workflows/python-publish.yml/badge.svg)](https://pypi.org/project/Sansorchi/)
+[![Test librery](https://github.com/KomeilParseh/Sansorchi/actions/workflows/Test.yml/badge.svg)](https://github.com/KomeilParseh/Sansorchi/actions/workflows/Test.yml)
+[![Upload Python Package](https://github.com/KomeilParseh/Sansorchi/actions/workflows/publish.yml/badge.svg)](https://pypi.org/project/Sansorchi/)
 
 # Sansorchi
 
