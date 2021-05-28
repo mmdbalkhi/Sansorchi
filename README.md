@@ -24,7 +24,7 @@ Sansorchi is a program to remove bad and inappropriate words (currently for the 
 
 ```bash
 
-    pip3 install Sansorchi
+pip3 install Sansorchi
 
 ```
 
@@ -32,8 +32,8 @@ Sansorchi is a program to remove bad and inappropriate words (currently for the 
 
 ```python
 
-    from Sansorchi import sansor
-    print(sansor("YOUR_TEXT"))
+from Sansorchi import sansor
+print(sansor("YOUR_TEXT"))
 
 ```
 
