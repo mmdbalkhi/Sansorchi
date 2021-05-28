@@ -1,4 +1,6 @@
-# Thanks for your participation,
-please test yourself before pull request
+<!--Thanks for your participation,
+please test yourself before pull request-->
 
-Please indicate what problem this code fixes or what feature it adds
+## What problem does this code fix or what feature does it add?
+<!--Please describe in full-->
+
