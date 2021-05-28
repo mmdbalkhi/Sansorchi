@@ -40,4 +40,4 @@ Sansorchi is a program to remove bad and inappropriate words (currently for the 
 
 ### Contributing
 
-See this [file](to) to contribute
+See this [file](https://github.com/KomeilParseh/Sansorchi/blob/main/CONTRIBUTING.md) to contribute
