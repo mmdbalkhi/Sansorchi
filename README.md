@@ -1,4 +1,4 @@
-[![Test librery](https://github.com/KomeilParseh/Sansorchi/actions/workflows/Test.yml/badge.svg)](https://github.com/KomeilParseh/Sansorchi/actions/workflows/Test.yml)
+[![Testing](https://github.com/KomeilParseh/Sansorchi/actions/workflows/Test.yml/badge.svg)](https://github.com/KomeilParseh/Sansorchi/actions/workflows/Test.yml)
 
 # Sansorchi
 
