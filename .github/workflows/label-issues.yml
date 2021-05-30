@@ -1,0 +1,15 @@
+name: Labeling new issue
+on:
+  issues:
+    types: ['opened']
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Renato66/auto-label@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          ignore-comments: true
+          labels-synonyms: '{"bug":["error","need fix","not working"],"enhancement":["upgrade"],"question":["help", "question"],"documentation":["documentation","document"],"wontfix":["wont fix","wontfix","need fix","needfix"],"good first issue":["good first","first issue","good issue"]}'
+          labels-not-allowed: '["good first issue"]'
+          default-labels: '["help wanted"]'
