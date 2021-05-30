@@ -39,5 +39,5 @@ jobs:
       run: |
         pytest test/test.py
     - name: Test with nose
-      run: | 
+      run: |
            nosetests
