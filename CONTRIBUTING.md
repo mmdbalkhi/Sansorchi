@@ -30,11 +30,4 @@ flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 pytest test/test.py
 
 ```
-
-
-# Pull Request Template
-
-- 1. Tracker ID: #ADD LINK TO PIVOTAL STORY
-
-- 2. PR Description: #Brief explanation about the Pull Request
-
+ 
