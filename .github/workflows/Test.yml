@@ -47,7 +47,7 @@ jobs:
           black .
           git add -A
           git commit -m "lint with Black"
-          git push
+          git push -u origin HEAD
           echo "linting successfull"
 
     - name: lint with isort
@@ -56,7 +56,7 @@ jobs:
            isort .
            git add -A
            git commit -m "lint with Isort"
-           git push
+           git push -u origin HEAD
            echo "linting successfull"
 
     - name: Test with pytest
