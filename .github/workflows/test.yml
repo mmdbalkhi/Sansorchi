@@ -1,0 +1,74 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Testing
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+        token: ${{ secrets.TOKEN }}
+
+    - name: git configuration
+      run: |
+          git config --global user.name Linter
+          git config --global user.email <>
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install flake8 pytest Sansorchi nose black isort
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with flake8
+      run: |
+        echo "linting with flake8"
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        echo "linting successfull"
+
+- name: lint with Black
+      run: |
+          echo "linting with Black..."
+          black .
+          git add -A
+          git commit -m "lint with Black"
+          git push -u origin HEAD
+          echo "linting successfull"
+
+    - name: lint with isort
+      run: |
+           echo "linting with Isort..."
+           isort .
+           git add -A
+           git commit -m "lint with Isort"
+           git push -u origin HEAD
+           echo "linting successfull"
+
+    - name: Test with pytest
+      run: |
+        echo "testing with pytest..."
+        pytest test/test.py
+        echo "testing successfull"
+
+    - name: Test with nose
+      run: |
+           echo "testing with nose..."
+           nosetests
+           echo "testing successfull"
