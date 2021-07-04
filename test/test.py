@@ -11,7 +11,7 @@ def test_sentences():
         assert sansor(txt) == outputs[i - 1]
 
 
-def test_word(): 
+def test_word():
     words = data.fa["word"]
     for word in words:
 
