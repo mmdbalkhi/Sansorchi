@@ -38,7 +38,6 @@ jobs:
     
            git add -A
            git commit -m "lint with Black"
-           git push
 
     - name: lint with isort
       run: |
@@ -46,7 +45,9 @@ jobs:
            
            git add -A
            git commit -m "lint with Isort"
-           git push
+    
+    - name: Push Changed
+       run: git push 
 
     - name: Test with pytest
       run: pytest test/test.py
