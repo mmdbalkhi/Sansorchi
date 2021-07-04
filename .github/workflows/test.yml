@@ -20,8 +20,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-           python -m pip install --upgrade pip
-           python -m pip install flake8 pytest nose black isort
+           
+           git pull origin main
+           python -m pip install -U flake8 pytest nose black isort
            pip install Sansorchi
            git config --global user.name Linter
            git config --global user.email ahmdparsh129@gmail.com
@@ -34,18 +35,17 @@ jobs:
     - name: lint with Black
       run: |
            black .
-           
-           git pull
-           
-           git commit -am "lint with Black"
+    
+           git add -A
+           git commit -m "lint with Black"
            git push
 
     - name: lint with isort
       run: |
            isort .
            
-           git pull
-           git commit -am "lint with Isort"
+           git add -A
+           git commit -m "lint with Isort"
            git push
 
     - name: Test with pytest
