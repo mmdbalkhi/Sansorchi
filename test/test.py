@@ -11,8 +11,8 @@ def test_sentences():
         assert sansor(txt) == outputs[i - 1]
 
 
-def test_word():
-    words = data.Json["word"]
+def test_word(): 
+    words = data.fa["word"]
     for word in words:
 
         assert sansor(word) == word[0] + "**" + word[-1]
