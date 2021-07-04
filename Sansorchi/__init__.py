@@ -1,6 +1,6 @@
 from .data import fa
 
-Json = Json["word"] 
+Json = fa["word"] 
 
 
 def sansor(txt: str, bad=Json, lang="fa", **kwargs) -> str:
