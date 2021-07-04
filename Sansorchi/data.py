@@ -1,4 +1,4 @@
-Json = {
+fa = {
     "author": "Amir Shokri",
     "email": "amirsh.nll@gmail.com",
     "update_time": "4 July, 2021",
