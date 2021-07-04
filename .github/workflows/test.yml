@@ -20,10 +20,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-           
+
+           git branch -u origin/main
            git pull origin main
-           python -m pip install -U flake8 pytest nose black isort
-           pip install Sansorchi
+
+           pip install -U flake8 pytest nose black isort
+           pip install -U Sansorchi
+
            git config --global user.name Linter
            git config --global user.email ahmdparsh129@gmail.com
     - name: Lint with flake8
