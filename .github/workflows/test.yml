@@ -1,20 +1,13 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
 name: Testing
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+on: [push, pull_request]
 jobs:
-  test:
-    runs-on: ubuntu-latest
-      strategy:
-        fail-fast: true
-        matrix:
+  tests:
+    name: Tests
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-18.04, ubuntu-latest]
         python-version: [pypy-3.6, pypy-3.7, 3.6, 3.7, 3.8, 3.9]
 
     steps:
