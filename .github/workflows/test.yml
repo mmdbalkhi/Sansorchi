@@ -47,7 +47,7 @@ jobs:
            git commit -m "lint with Isort"
     
     - name: Push Changed
-       run: git push 
+      run: git push 
 
     - name: Test with pytest
       run: pytest test/test.py
