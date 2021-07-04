@@ -34,12 +34,17 @@ jobs:
     - name: lint with Black
       run: |
            black .
+           
+           git pull
+           
            git commit -am "lint with Black"
            git push -u origin HEAD
 
     - name: lint with isort
       run: |
            isort .
+           
+           git pull
            git commit -am "lint with Isort"
            git push -u origin HEAD
 
