@@ -14,7 +14,5 @@ def test_sentences():
 def test_word():
     words = data.Json["word"]
     for word in words:
-        # TODO: Suport MultiPart words.The problem is from the split[init.py:9]
-        if " " in word:
-            continue
+
         assert sansor(word) == word[0]+"**"+word[-1]
