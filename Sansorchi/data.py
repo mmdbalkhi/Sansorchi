@@ -1,7 +1,7 @@
 Json = {
     "author": "Amir Shokri",
     "email": "amirsh.nll@gmail.com",
-    "update_time": "23 February, 2021",
+    "update_time": "4 July, 2021",
     "source ": "https://github.com/amirshnll/Persian-Swear-Words",
     "word": [
         "آبکیر",
