@@ -9,7 +9,7 @@ def sansor(txt: str, bad=Json, lang="fa", **kwargs) -> str:
     >>> sansor('موز خر است') == "م**ز خ**ر است' # Farsi
     """
 
-    if lang is "fa":
+    if lang == "fa":
         txt = txt.replace("‌", "")
     
     split = txt.split(" ")
