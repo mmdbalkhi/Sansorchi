@@ -1,4 +1,4 @@
-from Sansorchi import sadata, data
+from Sansorchi import sansor, data
 
 txts = ["تو موزی موز", "خنگ خدا", "خر به پیش", "حیوانی وحشی"]
 outputs = ["تو موزی م**ز", "خ**گ خدا", "خ**ر به پیش", "ح**ی وحشی"]
