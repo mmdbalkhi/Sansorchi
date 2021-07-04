@@ -8,11 +8,11 @@ def test_sentences():
     i = 0
     for txt in txts:
         i += 1
-        assert sansor(txt) == outputs[i-1]
+        assert sansor(txt) == outputs[i - 1]
 
 
 def test_word():
     words = data.Json["word"]
     for word in words:
 
-        assert sansor(word) == word[0]+"**"+word[-1]
+        assert sansor(word) == word[0] + "**" + word[-1]
