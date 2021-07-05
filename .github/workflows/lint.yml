@@ -23,9 +23,9 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Git configuration
-          run: |
-              git config user.name "linter"
-              git config user.email "lint@lint.lint"
+      run: |
+        git config user.name "linter"
+        git config user.email "lint@lint.lint"
 
     - name: Install dependencies
       run: |
