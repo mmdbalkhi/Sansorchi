@@ -12,3 +12,4 @@ jobs:
         with:
           python-root-list: "test Sansorchi"
           extra-pylint-options: "--disable=W0102,C0103"
+          extra-black-options: "."
