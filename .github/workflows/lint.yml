@@ -1,45 +1,36 @@
-name: Linting
+
+name: Lint
 
 on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  Lint:
-
+  run-linters:
+    name: Run linters
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: [3.8]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Check out Git repository
+        uses: actions/checkout@v2
 
-    - name: Git configuration
-      run: |
-        git config user.name "linter"
-        git config user.email "lint@lint.lint"
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install isort black
+      - name: Install Python dependencies
+        run: pip install black flake8
 
-    - name: Lint with Black
-      run: |
-        black .
-        git commit -am "lint with black"
-        git push
-
-    - name: Lint With Isort
-      run: |
-        isort .
-        git commit -am "lint with isort"
-        git push
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          black: true
+          flake8: true
+ 
