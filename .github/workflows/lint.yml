@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ricardochaves/python-lint@master
         with:
-          python-root-list = "test Sansorchi"
+          python-root-list = "*.py"
           use-pylint: true
           use-pycodestyle: true
           use-flake8: false
