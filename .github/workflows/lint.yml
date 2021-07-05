@@ -1,0 +1,45 @@
+name: Linting
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Git configuration
+          run: |
+              git config user.name "linter"
+              git config user.email "lint@lint.lint"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install isort black
+
+    - name: Lint with Black
+      run: |
+        black .
+        git commit -am "lint with black"
+        git push
+
+    - name: Lint With Isort
+      run: |
+        isort .
+        git commit -am "lint with isort"
+        git push
