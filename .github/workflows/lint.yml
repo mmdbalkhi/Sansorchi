@@ -1,4 +1,4 @@
-name: all-lints
+name: Lint
 
 on: [push]
 
@@ -11,4 +11,4 @@ jobs:
       - uses: ricardochaves/python-lint@master
         with:
           python-root-list: "test Sansorchi"
-          extra-pylint-options: "disable=W0102,C0103"
+          extra-pylint-options: "--disable=W0102,C0103"
