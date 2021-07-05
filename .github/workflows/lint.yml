@@ -12,9 +12,9 @@ jobs:
         with:
           python-root-list = "*.py"
 
-          use-pylint: true
-          use-pycodestyle: true
+          use-pylint: True
+          use-pycodestyle: True
           use-flake8: false
-          use-black: true
-          use-mypy: true
-          use-isort: true
+          use-black: True
+          use-mypy: True
+          use-isort: True
