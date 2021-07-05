@@ -20,9 +20,6 @@ jobs:
     - name: Install dependencies
       run: |
 
-           git branch -u origin/main
-           git pull origin main
-
            pip install -U flake8 pytest
            pip install -U Sansorchi
 
