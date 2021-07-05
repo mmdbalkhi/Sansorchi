@@ -21,7 +21,7 @@ jobs:
       run: |
 
            pip install -U flake8 pytest
-           pip install -U Sansorchi
+           python setup.py install
 
         
     - name: Lint with flake8
