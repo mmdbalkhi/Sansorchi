@@ -11,3 +11,4 @@ jobs:
       - uses: ricardochaves/python-lint@master
         with:
           python-root-list: "test Sansorchi"
+          extra-pylint-options: "disable=W0102,C0103"
