@@ -1,3 +1,4 @@
+"""Testing Sansorchi package"""
 
 from Sansorchi import data, sansor
 
@@ -6,6 +7,7 @@ outputs = ["تو موزی م**ز", "خ**گ خدا", "خ**ر به پیش", "ح**�
 
 
 def test_sentences():
+    """Test with up Lists"""
     i = 0
     for txt in txts:
         i += 1
@@ -13,6 +15,8 @@ def test_sentences():
 
 
 def test_word():
+    """Unit test, Clean the code with the help of pylint
+    """
     words = data.fa["word"]
     for word in words:
 

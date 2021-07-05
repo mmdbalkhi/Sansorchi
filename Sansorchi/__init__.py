@@ -5,7 +5,7 @@ from .data import fa
 json_data = fa["word"]
 
 
-def sansor(txt: str, bad=json_data, lang="fa", **kwargs) -> str:
+def sansor(txt: str, bad=json_data, lang="fa", *args, **kwargs) -> str:
     """This function takes an obligatory input called
     txt and deletes it if there is an insult in it
     >>> sansor('موز خر است') == "م**ز خ**ر است' # Farsi
