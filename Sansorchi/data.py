@@ -1,3 +1,5 @@
+"""Swear word data"""
+
 fa = {
     "author": "Amir Shokri",
     "email": "amirsh.nll@gmail.com",

@@ -1,3 +1,4 @@
+
 from Sansorchi import data, sansor
 
 txts = ["تو موزی موز", "خنگ خدا", "خر به پیش", "حیوانی وحشی"]
