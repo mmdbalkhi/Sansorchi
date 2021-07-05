@@ -11,10 +11,3 @@ jobs:
       - uses: ricardochaves/python-lint@master
         with:
           python-root-list = "*.py"
-
-          use-pylint: True
-          use-pycodestyle: True
-          use-flake8: false
-          use-black: True
-          use-mypy: True
-          use-isort: True
