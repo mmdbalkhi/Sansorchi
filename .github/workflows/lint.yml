@@ -9,5 +9,3 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ricardochaves/python-lint@master
-        with:
-          python-root-list = "*.py"
