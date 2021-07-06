@@ -16,8 +16,8 @@ setup(
     author="KomeilParseh",
     author_email="ahmdparsh129@gmail.com",
     url="https://github.com/KomeilParseh/Sansorchi",
-    download_url="https://github.com/KomeilParseh/Sansorchi",
-    keywords=["Improper words", "swearing", "sansorchi", "Sansorchi"],
+    download_url="https://github.com/KomeilParseh/Sansorchi/releases",
+    keywords=["Improper words", "swearing", "sansorchi", "Sansorchi", "سانسور" ,"سانسورچی" ,"فحش" ,"پایتون"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
