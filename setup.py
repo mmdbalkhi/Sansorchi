@@ -1,7 +1,7 @@
-from version import __VERSION__
+from __version__ import __VERSION__
 
 with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+    readme = fh.read()
 
 dev_requires = ["black", "pytest", "pylint"]
 doc_requires = ["sphinx", "myst_parser"]
@@ -12,7 +12,7 @@ def setup_package():
         name="Sansorchi",
         packages=["Sansorchi"],
         version=__VERSION__,
-        long_description=long_description,
+        long_description=readme,
         long_description_content_type="text/markdown",
         description="Remove Persian (Farsi) Swear Words",
         author="KomeilParseh",

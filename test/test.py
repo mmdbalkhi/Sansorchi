@@ -18,5 +18,5 @@ def test_word():
     """Unit test, Clean the code with the help of pylint"""
     words = data.fa["word"]
     for word in words:
-
         assert sansor(word) == word[0] + "**" + word[-1]
+        
