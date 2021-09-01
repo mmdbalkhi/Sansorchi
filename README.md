@@ -1,4 +1,6 @@
 [![Testing](https://github.com/KomeilParseh/Sansorchi/actions/workflows/test.yml/badge.svg)](https://github.com/KomeilParseh/Sansorchi/actions/workflows/test.yml)
+[![Pylint](https://github.com/KomeilParseh/Sansorchi/actions/workflows/pylint.yml/badge.svg)](https://github.com/KomeilParseh/Sansorchi/actions/workflows/pylint.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/komeilparseh/sansorchi/badge)](https://www.codefactor.io/repository/github/komeilparseh/sansorchi)
 
 # Sansorchi
 
