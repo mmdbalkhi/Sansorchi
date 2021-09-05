@@ -23,12 +23,8 @@ jobs:
       matrix:
         include:
           - {name: Linux, python: '3.9', os: ubuntu-latest, tox: py39}
-          - {name: Windows, python: '3.9', os: windows-latest, tox: py39}
-          - {name: Mac, python: '3.9', os: macos-latest, tox: py39}
           - {name: '3.8', python: '3.8', os: ubuntu-latest, tox: py38}
           - {name: '3.7', python: '3.7', os: ubuntu-latest, tox: py37}
-          - {name: '3.6', python: '3.6', os: ubuntu-latest, tox: py36}
-          - {name: 'PyPy', python: pypy3, os: ubuntu-latest, tox: pypy3}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -42,6 +38,9 @@ jobs:
       - name: get pip cache dir
         id: pip-cache
         run: echo "::set-output name=dir::$(pip cache dir)"
+      - name: Install Sansorchi
+        run: |
+          python setup.py install
       - name: cache pip
         uses: actions/cache@v2
         with:
