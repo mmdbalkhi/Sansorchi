@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - {name: Linux, python: '3.9', os: ubuntu-latest, tox: py39}
+          - {name: '3.9', python: '3.9', os: ubuntu-latest, tox: py39}
           - {name: '3.8', python: '3.8', os: ubuntu-latest, tox: py38}
           - {name: '3.7', python: '3.7', os: ubuntu-latest, tox: py37}
     steps:
@@ -38,13 +38,11 @@ jobs:
       - name: get pip cache dir
         id: pip-cache
         run: echo "::set-output name=dir::$(pip cache dir)"
-      - name: Install Sansorchi
-        run: |
-          python setup.py install
       - name: cache pip
         uses: actions/cache@v2
         with:
           path: ${{ steps.pip-cache.outputs.dir }}
           key: pip|${{ runner.os }}|${{ matrix.python }}|${{ hashFiles('setup.py') }}|${{ hashFiles('requirements/*.txt') }}
       - run: pip install tox
+      - run: python setup.py install
       - run: tox -e ${{ matrix.tox }}
