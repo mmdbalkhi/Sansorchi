@@ -1,6 +1,6 @@
 """Testing Sansorchi package"""
 
-from Sansorchi import data, sansor
+from sansorchi import data, sansor
 
 txts = ["تو موزی موز", "خنگ خدا", "خر به پیش", "حیوانی وحشی"]
 outputs = ["تو موزی م**ز", "خ**گ خدا", "خ**ر به پیش", "ح**ی وحشی"]

@@ -37,7 +37,7 @@ pip3 install Sansorchi
 
 ```python
 
-from Sansorchi import sansor
+from sansorchi import sansor
 print(sansor("YOUR_TEXT"))
 
 ```
