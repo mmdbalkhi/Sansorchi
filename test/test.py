@@ -19,4 +19,3 @@ def test_word():
     words = data.fa["word"]
     for word in words:
         assert sansor(word) == word[0] + "**" + word[-1]
-        

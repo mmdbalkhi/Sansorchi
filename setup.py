@@ -10,7 +10,7 @@ doc_requires = ["sphinx", "myst_parser"]
 def setup_package():
     metadata = dict(
         name="Sansorchi",
-        packages=["Sansorchi"],
+        packages=["sansorchi"],
         version=__VERSION__,
         long_description=readme,
         long_description_content_type="text/markdown",

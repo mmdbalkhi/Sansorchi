@@ -1,6 +1,9 @@
 """Sansorchi a pakage for remove swears word"""
 
+
 from .data import fa
+
+__all__ = ["sansor"]
 
 json_data = fa["word"]
 
