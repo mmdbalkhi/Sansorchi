@@ -30,7 +30,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: What version of our pakage are you running?
+      description: What version of our package are you running?
       options:
         - V3.2.1 (Default)
         - V3.1
