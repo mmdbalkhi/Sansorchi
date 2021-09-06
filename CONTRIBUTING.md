@@ -113,7 +113,7 @@ git fetch origin
 git checkout -b your-branch-name origin/main
 ```
 
-* Using your favorite editor, make your changes, [committing as you go](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html#commit-your-changes).
+* Using your favorite editor, make your changes, committing as you go.
 
 * Include tests that cover any code changes you make. Make sure the
     test fails without your patch. Run the tests as described below.
@@ -130,7 +130,7 @@ Running the tests
 Run the basic test suite with pytest.
 
 ```
-pytest test/test,py
+pytest test/test.py
 ```
 
 This runs the tests for the current environment, which is usually
