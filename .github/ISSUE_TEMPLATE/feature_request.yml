@@ -1,17 +1,43 @@
 name: Feature Request
-description: Suggest an idea or ask for a feature that you would like to have in FastAPI
+description: Suggest an idea or ask for a feature that you would like to have in sansorchi
 labels: [enhancement]
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for your interest in sansorchi! 🚀
+
         Please follow these instructions, fill every question, and do every step. 🙏
+
         I'm asking this because answering questions and solving problems in GitHub issues is what consumes most of the time.
+
         I end up not being able to add new features, fix bugs, review pull requests, etc. as fast as I wish because I have to spend too much time handling issues.
+
+        All that, on top of all the incredible help provided by a bunch of community members, the [sansorchi Experts](https://sansorchi.tiangolo.com/sansorchi-people/#experts), that give a lot of their time to come here and help others.
+
+        That's a lot of work they are doing, but if more sansorchi users came to help others like them just a little bit more, it would be much less effort for them (and you and me 😅).
+
         By asking questions in a structured way (following this) it will be much easier to help you.
+
         And there's a high chance that you will find the solution along the way and you won't even have to submit it and wait for an answer. 😎
+
         As there are too many issues with questions, I'll have to close the incomplete ones. That will allow me (and others) to focus on helping people like you that follow the whole process and help us help you. 🤓
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: First Check
+      description: Please confirm and check all the following options.
+      options:
+        - label: I added a very descriptive title to this issue.
+          required: true
+        - label: I used the GitHub search to find a similar issue and didn't find it.
+          required: true
+        - label: I searched the sansorchi documentation, with the integrated search.
+          required: true
+        - label: I already searched in Google "How to X in sansorchi" and didn't find any information.
+          required: true
+        - label: I already read and followed all the tutorial in the docs and didn't find an answer.
+          required: true
 
   - type: checkboxes
     id: help
@@ -28,18 +54,6 @@ body:
         - label: I commit to help with one of those options 👆
           required: true
   - type: textarea
-    id: example
-    attributes:
-      label: Example Code
-      description: |
-        Please add a self-contained, [minimal, reproducible, example](https://stackoverflow.com/help/minimal-reproducible-example) with your use case.
-
-        If I (or someone) can copy it, run it, and see it right away, there's a much higher chance I (or someone) will be able to help you.
-
-      render: python
-    validations:
-      required: true
-  - type: textarea
     id: description
     attributes:
       label: Description
@@ -47,6 +61,7 @@ body:
         What is your feature request?
 
         Write a short description telling me what you are trying to solve and what you are currently doing.
+      placeholder: ""
     validations:
       required: true
   - type: textarea
@@ -55,7 +70,7 @@ body:
       label: Wanted Solution
       description: |
         Tell me what's the solution you would like.
-
+      placeholder: ""
     validations:
       required: true
   - type: textarea
@@ -63,24 +78,18 @@ body:
     attributes:
       label: Wanted Code
       description: Show me an example of how you would want the code to look like.
-      placeholder: |
-
+      placeholder: ""
       render: python
     validations:
-      required: true
+      required: false
   - type: textarea
     id: alternatives
     attributes:
       label: Alternatives
       description: |
         Tell me about alternatives you've considered.
-      placeholder: |
-        To wait for Space X moon travel plans to drop down long after they release them. But I would rather teleport.
-  - type: textarea
-    id: os-details
-    attributes:
-      label: Operating System Details
-      description: You can add more details about your operating system here, in particular if you chose "Other".
+      placeholder: ""
+
   - type: input
     id: sansorchi-version
     attributes:
@@ -91,7 +100,7 @@ body:
         You can find the sansorchi version with:
 
         ```bash
-        python -c "import sansorchi; print(sansorchi.version)"
+        python -c "import sansorchi; print(sansorchi.__version__)"
         ```
     validations:
       required: true
@@ -100,8 +109,8 @@ body:
     attributes:
       label: Python Version
       description: |
-
         What Python version are you using?
+
         You can find the Python version with:
 
         ```bash
@@ -114,4 +123,3 @@ body:
     attributes:
       label: Additional Context
       description: Add any additional context information or screenshots you think are useful.
-
