@@ -1,6 +1,6 @@
 """Testing Sansorchi package"""
 
-from sansorchi import __version__, data, sansor
+from sansorchi import data, sansor
 
 txts = ["تو موزی موز", "خنگ خدا", "خر به پیش", "حیوانی وحشی"]
 outputs = [" تو ***ی ***", "*** خدا ", "*** به پیش ", "***** وحشی "]
@@ -12,10 +12,3 @@ def test_sentences():
     for txt in txts:
         i += 1
         assert sansor(txt) == outputs[i - 1]
-
-
-def test_version():
-    assert __version__ == "4.0"
-
-
-print(__version__)
