@@ -1,31 +1,39 @@
-"""Sansorchi a pakage for remove swears word"""
-
+"""Sansorchi a package for remove swears word"""
+import re
 
 from .data import fa
 
 __all__ = ["sansor"]
 
-json_data = fa["word"]
 
-
-def sansor(txt: str, bad=json_data, lang="fa") -> str:
-    """This function takes an obligatory input called
-    txt and deletes it if there is an insult in it
-    >>> sansor('موز خر است') == "م**ز خ**ر است' # Farsi
+def sansor(txt: str, bad_db=fa["word"]) -> str:
+    """*** this func receives a text and processesit
+    **** *and returns the processed text to the user
+    *** *replaces swear words with length of that start Note: The
+    ** word swear at any length Returns the length of that star
+    >>> sansor('موز خر است') == "** ** است' # Farsi
     """
 
-    if lang == "fa":
-        txt = txt.replace("‌", "")
+    txt = txt.replace("‌", "")
 
     split = txt.split(" ")
-
     return_txt = ""
-    for i in split:
-        if i in bad:
-            badi = str(i[0]) + "**" + str(i[-1])
-            return_txt += badi
-        else:
-            return_txt += i
-        if split[-1] != i:
+
+    for text in split:
+        swear_bool = False
+        for swear in bad_db:
+            if re.findall(swear, text):  # if swear word in text do this
+                ret = re.sub(
+                    swear, str(len(swear) * "*"), text
+                )  # replace swear word with start
+                return_txt += ret
+
+                swear_bool = True
+                break
+        if not swear_bool:
+            return_txt = return_txt + text
+
+        if len(split) > 1:
             return_txt += " "
+
     return return_txt
