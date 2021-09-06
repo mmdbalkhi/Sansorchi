@@ -1,3 +1,3 @@
 # TODO
 
-- [ ] The problem of "ی" at the end of words
+- [X] The problem of "ی" at the end of words

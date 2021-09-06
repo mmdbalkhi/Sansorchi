@@ -130,7 +130,7 @@ Running the tests
 Run the basic test suite with pytest.
 
 ```
-pytest test/test.py
+pytest
 ```
 
 This runs the tests for the current environment, which is usually
@@ -151,7 +151,7 @@ generate a report.
 
 ```
 pip install coverage
-coverage run -m pytest test/test.py
+coverage run -m pytest
 ```
 
 Read more about `coverage <https://coverage.readthedocs.io>`
