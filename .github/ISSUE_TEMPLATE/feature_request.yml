@@ -14,28 +14,6 @@ body:
         As there are too many issues with questions, I'll have to close the incomplete ones. That will allow me (and others) to focus on helping people like you that follow the whole process and help us help you. 🤓
 
   - type: checkboxes
-    id: checks
-    attributes:
-      label: First Check
-      description: Please confirm and check all the following options.
-      options:
-        - label: I added a very descriptive title to this issue.
-          required: true
-        - label: I used the GitHub search to find a similar issue and didn't find it.
-          required: true
-        - label: I searched the FastAPI documentation, with the integrated search.
-          required: true
-        - label: I already searched in Google "How to X in FastAPI" and didn't find any information.
-          required: true
-        - label: I already read and followed all the tutorial in the docs and didn't find an answer.
-          required: true
-        - label: I already checked if it is not related to FastAPI but to [Pydantic](https://github.com/samuelcolvin/pydantic).
-          required: true
-        - label: I already checked if it is not related to FastAPI but to [Swagger UI](https://github.com/swagger-api/swagger-ui).
-          required: true
-        - label: I already checked if it is not related to FastAPI but to [ReDoc](https://github.com/Redocly/redoc).
-          required: true
-  - type: checkboxes
     id: help
     attributes:
       label: Commit to Help
@@ -122,8 +100,8 @@ body:
     attributes:
       label: Python Version
       description: |
-        What Python version are you using?
 
+        What Python version are you using?
         You can find the Python version with:
 
         ```bash
