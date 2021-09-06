@@ -39,16 +39,21 @@ body:
         - V1
     validations:
       required: true
-  - type: dropdown
-    id: python
+  - type: input
+    id: python-version
     attributes:
-      label: What is the current version of your Python?
-      multiple: false
-      options:
-        - 3.9
-        - 3.8
-        - 3.7
-        - 3.6
+      label: Python Version
+      description: |
+        What Python version are you using?
+
+        You can find the Python version with:
+
+        ```bash
+        python --version
+        ```
+    validations:
+      required: true
+
   - type: checkboxes
     id: terms
     attributes:
