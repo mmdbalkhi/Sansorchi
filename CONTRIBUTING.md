@@ -45,12 +45,12 @@ git config --global user.email 'your email'
 ```
 
 * Make sure you have a [GitHub account](https://github.com/join).
-* Fork Flask to your GitHub account by clicking the [Fork](https://github.com/komeilparseh/Sansorchi/fork) button.
+* Fork Flask to your GitHub account by clicking the [Fork](https://github.com/mmdbalkhi/Sansorchi/fork) button.
 
 * `Clone` the main repository locally.
 
 ```
-git clone https://github.com/komeilparseh/Sansorchi
+git clone https://github.com/mmdbalkhi/Sansorchi
 cd Sansorchi
 ```
 
