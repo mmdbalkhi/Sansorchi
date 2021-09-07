@@ -7,6 +7,10 @@ on:
     paths-ignore:
       - "*.md"
       - "*.rst"
+      - "*.yml"
+      - "*.yaml"
+
+
   pull_request:
     branches:
       - main
@@ -14,6 +18,8 @@ on:
     paths-ignore:
       - "*.md"
       - "*.rst"
+      - "*.yml"
+      - "*.yaml"
 jobs:
   tests:
     name: ${{ matrix.name }}
