@@ -1,7 +1,13 @@
 name: Pylint
 
-on: [push]
-
+on:
+  push:
+    branches:
+      - main
+      - '*.x'
+    paths-ignore:
+      - '*.md'
+      - '*.rst'
 jobs:
   build:
 
