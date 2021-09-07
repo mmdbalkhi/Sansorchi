@@ -21,15 +21,19 @@ def sansor(txt: str, bad_db=fa["word"]) -> str:
 
     for text in split:
         swear_bool = False
-        for swear in bad_db:
-            if re.findall(swear, text):  # if swear word in text do this
-                ret = re.sub(
-                    swear, str(len(swear) * "*"), text
-                )  # replace swear word with start
-                return_txt += ret
+        if text not in bad_db:
+            for swear in bad_db:
+                if re.findall(swear, text):  # if swear word in text do this
+                    return_txt += re.sub(
+                        swear, str(len(swear) * "*"), text
+                    )  # replace swear word with start
 
-                swear_bool = True
-                break
+                    swear_bool = True
+                    break
+        else:
+            return_txt += str(len(text) * "*")
+            swear_bool = True
+
         if not swear_bool:
             return_txt = return_txt + text
 

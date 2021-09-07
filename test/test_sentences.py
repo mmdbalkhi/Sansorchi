@@ -1,9 +1,9 @@
 """Testing Sansorchi package"""
 
-from sansorchi import data, sansor
+from sansorchi import sansor
 
 txts = ["تو موزی موز", "خنگ خدا", "خر به پیش", "حیوانی وحشی"]
-outputs = [" تو ***ی ***", "*** خدا ", "*** به پیش ", "***** وحشی "]
+outputs = ["تو ***ی *** ", "*** خدا ", "** به پیش ", "*****ی وحشی "]
 
 
 def test_sentences():

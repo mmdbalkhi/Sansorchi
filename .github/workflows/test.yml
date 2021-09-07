@@ -3,17 +3,23 @@ on:
   push:
     branches:
       - main
-      - '*.x'
+      - "*.x"
     paths-ignore:
-      - '*.md'
-      - '*.rst'
+      - "*.md"
+      - "*.rst"
+      - "*.yml"
+      - "*.yaml"
+
+
   pull_request:
     branches:
       - main
-      - '*.x'
+      - "*.x"
     paths-ignore:
-      - '*.md'
-      - '*.rst'
+      - "*.md"
+      - "*.rst"
+      - "*.yml"
+      - "*.yaml"
 jobs:
   tests:
     name: ${{ matrix.name }}
@@ -22,9 +28,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - {name: '3.9', python: '3.9', os: ubuntu-latest, tox: py39}
-          - {name: '3.8', python: '3.8', os: ubuntu-latest, tox: py38}
-          - {name: '3.7', python: '3.7', os: ubuntu-latest, tox: py37}
+          - { name: "3.9", python: "3.9", os: ubuntu-latest, tox: py39 }
+          - { name: "3.8", python: "3.8", os: ubuntu-latest, tox: py38 }
+          - { name: "3.7", python: "3.7", os: ubuntu-latest, tox: py37 }
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -44,5 +50,5 @@ jobs:
           path: ${{ steps.pip-cache.outputs.dir }}
           key: pip|${{ runner.os }}|${{ matrix.python }}|${{ hashFiles('setup.py') }}|${{ hashFiles('requirements/*.txt') }}
       - run: pip install tox
-      - run: python setup.py install
+      - run: pip install -e .
       - run: tox -e ${{ matrix.tox }}
