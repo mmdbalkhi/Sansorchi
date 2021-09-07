@@ -154,4 +154,4 @@ pip install coverage
 coverage run -m pytest
 ```
 
-Read more about `coverage <https://coverage.readthedocs.io>`
+Read more about [`coverage`](https://coverage.readthedocs.io)

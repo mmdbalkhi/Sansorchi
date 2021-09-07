@@ -1,7 +1,13 @@
 name: Pylint
 
-on: [push]
-
+on:
+  push:
+    branches:
+      - main
+      - '*.x'
+    paths-ignore:
+      - '*.md'
+      - '*.rst'
 jobs:
   build:
 
@@ -19,4 +25,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint Sansorchi test --exit-zero
+        pylint sansorchi test --exit-zero
