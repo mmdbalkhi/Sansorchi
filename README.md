@@ -1,8 +1,8 @@
 <p align="center">
-<a href="https://www.codefactor.io/repository/github/komeilparseh/sansorchi"><img src="https://www.codefactor.io/repository/github/komeilparseh/sansorchi/badge" alt="CodeFactor"></a>
-<a href="https://results.pre-commit.ci/latest/github/KomeilParseh/Sansorchi/main"><img src="https://results.pre-commit.ci/badge/github/KomeilParseh/Sansorchi/main.svg" alt="pre-commit"></a>
-<a href="https://github.com/KomeilParseh/Sansorchi/actions/workflows/pylint.yml"><img src="https://github.com/KomeilParseh/Sansorchi/actions/workflows/pylint.yml/badge.svg" alt="pylint"></a>
-<a href="https://github.com/KomeilParseh/Sansorchi/actions/workflows/test.yml"><img src="https://github.com/KomeilParseh/Sansorchi/actions/workflows/test.yml/badge.svg" alt="test"></a>
+<a href="https://www.codefactor.io/repository/github/mmdbalkhi/sansorchi"><img src="https://www.codefactor.io/repository/github/mmdbalkhi/sansorchi/badge" alt="CodeFactor"></a>
+<a href="https://results.pre-commit.ci/latest/github/mmdbalkhi/Sansorchi/main"><img src="https://results.pre-commit.ci/badge/github/mmdbalkhi/Sansorchi/main.svg" alt="pre-commit"></a>
+<a href="https://github.com/mmdbalkhi/Sansorchi/actions/workflows/pylint.yml"><img src="https://github.com/mmdbalkhi/Sansorchi/actions/workflows/pylint.yml/badge.svg" alt="pylint"></a>
+<a href="https://github.com/mmdbalkhi/Sansorchi/actions/workflows/test.yml"><img src="https://github.com/mmdbalkhi/Sansorchi/actions/workflows/test.yml/badge.svg" alt="test"></a>
 </p>
 
 # Sansorchi
@@ -44,4 +44,4 @@ print(sansor("YOUR_TEXT"))
 
 ### Contributing
 
-See this [file](https://github.com/KomeilParseh/Sansorchi/blob/main/CONTRIBUTING.md) to contribute
+See this [file](https://github.com/mmdbalkhi/Sansorchi/blob/main/CONTRIBUTING.md) to contribute
