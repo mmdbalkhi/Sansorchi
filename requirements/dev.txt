@@ -129,7 +129,7 @@ tomli==1.2.1
     # via
     #   pep517
     #   pytest
-tox==3.24.5
+tox==3.25.0
     # via -r requirements/dev.in
 urllib3==1.26.6
     # via requests
