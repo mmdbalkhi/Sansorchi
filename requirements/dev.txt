@@ -80,7 +80,7 @@ pygments==2.10.0
     #   sphinx-tabs
 pyparsing==2.4.7
     # via packaging
-pytest==7.1.1
+pytest==7.1.2
     # via -r requirements/tests.in
 python-dotenv==0.20.0
     # via -r requirements/tests.in
