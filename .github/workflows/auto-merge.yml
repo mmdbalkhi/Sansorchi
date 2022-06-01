@@ -62,8 +62,7 @@ merge:
   # will be used for PRs targeting that branch. The valid values are the same as for the "method" key.
   # Note: If the target branch does not match any of the specified keys, the "method" key is used instead.
   branch_method:
-    develop: squash
-    master: merge
+    main: squash
   ##### branch_method has been DEPRECATED in favor of merge_method #####
 
   # Allows the merge method that is used when auto-merging a PR to be different
