@@ -1,0 +1,101 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  pull_request:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # "version" is the configuration version, currently "1".
+version: 1
+
+# "merge" defines how and when pull requests are merged. If the section is
+# missing, bulldozer will consider all pull requests and use default settings.
+merge:
+  # "trigger" defines the set of pull requests considered by bulldozer. If
+  # the section is missing, bulldozer considers all pull requests not excluded
+  # by the ignore conditions.
+  trigger:
+    # Pull requests with any of these labels (case-insensitive) are added to
+    # the trigger.
+    labels: ["auto-merge"]
+
+    # Pull requests where the body or any comment contains any of these
+    # substrings are added to the trigger.
+    comment_substrings: ["==MERGE_WHEN_READY=="]
+
+    # Pull requests where any comment matches one of these exact strings are
+    # added to the trigger.
+    comments: ["Please merge this pull request!"]
+
+    # Pull requests where the body contains any of these substrings are added
+    # to the trigger.
+    pr_body_substrings: ["==MERGE_WHEN_READY=="]
+
+    # Pull requests targeting any of these branches are added to the trigger.
+    branches: ["main"]
+
+    # Pull requests with auto merge enabled are added to the trigger.
+    auto_merge: true
+
+  # "ignore" defines the set of pull request ignored by bulldozer. If the
+  # section is missing, bulldozer considers all pull requests. It takes the
+  # same keys as the "trigger" section.
+  ignore:
+    labels: ["dont-merge"]
+    comment_substrings: ["==DO_NOT_MERGE=="]
+
+  # "method" defines the merge method. The available options are "merge",
+  # "rebase", "squash", and "ff-only".
+  method: squash
+
+  ##### branch_method has been DEPRECATED in favor of merge_method #####
+  #
+  # Allows the merge method that is used when auto-merging a PR to be different
+  # target branch. The keys of the hash are the target branch name, and the values are the merge method that
+  # will be used for PRs targeting that branch. The valid values are the same as for the "method" key.
+  # Note: If the target branch does not match any of the specified keys, the "method" key is used instead.
+  branch_method:
+    develop: squash
+    master: merge
+  ##### branch_method has been DEPRECATED in favor of merge_method #####
+
+  # Allows the merge method that is used when auto-merging a PR to be different
+  # based on trigger criteria. The first method where ALL triggers match will
+  # be used. Otherwise, the method specified previously in "merge.method" will
+  # be used.
+  # - ALL trigger criteria must match, unlike merge/trigger where ANY match
+  # will trigger bulldozer.
+  # - This will override any branch_method logic if one of the methods is
+  # triggered
+  # - If no trigger criteria is provided the method is ignored
+  merge_method:
+    # "method" defines the merge method. The available options are "merge",
+    # "rebase", "squash", and "ff-only".
+    - method: squash
+      trigger:
+        # All methods from merge/trigger are supported. Additionally, the
+        # following additional methods are provided:
+
+        # Pull requests which a number of commits less than or equal to this value are added to the trigger.
+        max_commits: 3
+
+  # "required_statuses" is a list of additional status contexts that must pass
+  # before bulldozer can merge a pull request. This is useful if you want to
+  # require extra testing for automated merges, but not for manual merges.
+  required_statuses:
+    - "ci/circleci: ete-tests"
+
+  # If true, bulldozer will delete branches after their pull requests merge.
+  delete_after_merge: true
+
+  # If true, bulldozer will merge pull requests with no required checks. This
+  # helps to protect against merging branches which inadvertently do not have
+  # required status checks.
+  allow_merge_with_no_checks: false
