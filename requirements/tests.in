@@ -1,5 +1,0 @@
-pytest
-asgiref
-blinker
-greenlet
-python-dotenv
