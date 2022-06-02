@@ -1,43 +1,44 @@
-"""Sansorchi a package for remove swears word"""
 import re
+from typing import Union
+
+from hazm import Normalizer  # type: ignore
 
 from .data import fa
 
-__all__ = ["sansor"]
 
+class Sansorchi:
+    """Remove Persian (Farsi) Swear Words
 
-def sansor(txt: str, bad_db=fa["word"]) -> str:
-    """*** this func receives a text and processesit
-    **** *and returns the processed text to the user
-    *** *replaces swear words with length of that start Note: The
-    ** word swear at any length Returns the length of that star
-    >>> sansor('موز خر است') == "** ** است' # Farsi
+    :func:`remove_swear_words` removes Persian (Farsi) swear words from a given text.
+    =====================================================================================
+    :param text: text to remove swear words
+    :type text: str
+    :return: text without swear words
     """
 
-    txt = txt.replace("‌", "")
+    def __init__(self, level=None) -> None:
+        self.level = level
+        self.bad_words = fa["word"]
 
-    split = txt.split(" ")
-    return_txt = ""
+    def __repr__(self) -> str:
+        return f"Sansorchi({self.level})"
 
-    for text in split:
-        swear_bool = False
-        if text not in bad_db:
-            for swear in bad_db:
-                if re.findall(swear, text):  # if swear word in text do this
-                    return_txt += re.sub(
-                        swear, str(len(swear) * "*"), text
-                    )  # replace swear word with start
+    def remove_bad_words(self, text: Union[str, bytes], replace_text: str = "") -> str:
+        if isinstance(text, bytes):  # pragma: no cover
+            text = text.decode("utf-8")
 
-                    swear_bool = True
-                    break
-        else:
-            return_txt += str(len(text) * "*")
-            swear_bool = True
+        for word in self.bad_words:
+            text = re.sub(word, replace_text, text)
 
-        if not swear_bool:
-            return_txt = return_txt + text
+        return text
 
-        if len(split) > 1:
-            return_txt += " "
+    def is_bad_word(self, text: Union[str, bytes]) -> bool:
+        for word in self.bad_words:
+            if word in text:
+                return True
+        return False
 
-    return return_txt
+    @staticmethod
+    def normalize(text: Union[str, bytes]) -> str:  # pragma: no cover
+        normalizer = Normalizer()
+        return normalizer.normalize(text)
