@@ -1,4 +1,4 @@
 """Sansorchi a package for remove swears word"""
+from sansorchi.sansorchi import Sansorchi  # noqa: E401
 
-from .__version__ import __version__ as version
-from .sansorchi import sansor
+__version__ = "5.0.0-dev"
