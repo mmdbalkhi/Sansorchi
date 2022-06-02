@@ -28,3 +28,4 @@ python-dotenv==0.20.0
     # via -r requirements/tests.in
 tomli==2.0.1
     # via pytest
+mypy
