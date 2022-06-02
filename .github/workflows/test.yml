@@ -43,7 +43,7 @@ jobs:
           pip install -e .
 
       - name: Run Flake8 💫
-        run: flake8 breeze tests setup.py
+        run: flake8 sansorchi tests setup.py
 
       - name: Run Tests and collect coverage 🧪
         run: |
