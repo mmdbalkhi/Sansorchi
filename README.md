@@ -35,12 +35,23 @@ pip3 install Sansorchi
 
 ### usage
 
+- remove badwords
+
 ```python
+from sansorchi import Sansorchi
 
-from sansorchi import sansor
-print(sansor("YOUR_TEXT"))
+sansorchi = Sansorchi()
 
+sansorchi.remove_bad_words("YOUR_TEXT")
 ```
+
+- check badwords
+
+```python
+sansorchi.is_bad_word("YOUR_TEXT")
+```
+
+if yourtext has badword return True else return False
 
 ### Contributing
 
